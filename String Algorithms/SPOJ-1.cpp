@@ -1,3 +1,6 @@
+// O(nlogn+m) solution where n=size of text, m=size of pattern, log n factor is due to modular inverse being calculated at every step
+// Same approach as substring hashing in O(1)
+
 #include<iostream>
 #include<bits/stdc++.h> 
 #define ll long long
