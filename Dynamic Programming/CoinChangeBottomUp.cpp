@@ -11,14 +11,14 @@ long long numberOfWays(int n,int m,int coins[])
   dp[0][j]=1;
  for(int i=1;i<n+1;i++)
  {
-  for(int j=0;j<m;j++)
+  for(int j=1;j<m+1;j++)
   {
-   if(i>=coins[j])
-    dp[i][j]=dp[i-coins[j]][j];
+   if(i>=coins[j-1])
+    dp[i][j]=dp[i-coins[j-1]][j];
    dp[i][j]+=dp[i][j-1];
   }
  }
- return dp[n][m-1];
+ return dp[n][m];
 }
 
 int main()
